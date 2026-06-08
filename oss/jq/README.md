@@ -105,6 +105,14 @@ filtered CLI validation harness, not as an implementation guide.
 The CLI must follow the [MiniJQ CLI feature specification](spec/features/cli/README.md)
 and its `eval`, `check`, and `version` subcommand specs.
 
+### Prompt index
+
+- [Go](#go)
+- [Rust](#rust)
+- [Python](#python)
+- [TypeScript](#typescript)
+- [C#](#c)
+
 ### Go
 
 ```text
@@ -286,14 +294,6 @@ The library should expose a small API such as `Parse(string query)` and
 field lookup, nested lookup, array iteration, array index, pipe composition,
 object construction, `length`, `keys`, `has()`, `map()`, `select()`, and `type`.
 ```
-
-Prompt index:
-
-- [Go](#go)
-- [Rust](#rust)
-- [Python](#python)
-- [TypeScript](#typescript)
-- [C#](#c)
 
 ## Scope Boundary
 
