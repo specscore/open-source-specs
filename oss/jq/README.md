@@ -105,13 +105,8 @@ filtered CLI validation harness, not as an implementation guide.
 The CLI must follow the [MiniJQ CLI feature specification](spec/features/cli/README.md)
 and its `eval`, `check`, and `version` subcommand specs.
 
-### Prompt index
-
-- [Go](#go)
-- [Rust](#rust)
-- [Python](#python)
-- [TypeScript](#typescript)
-- [C#](#c)
+These prompts ([Go](#go), [Rust](#rust), [Python](#python), [TypeScript](#typescript),
+[C#](#c)) are intended for comparable MiniJQ reimplementation runs.
 
 ### Go
 
