@@ -68,8 +68,8 @@ string, the command MUST write the string contents without JSON string quotes.
 ### AC: null-input-computes-value (verifies REQ:null-input-mode)
 
 **Given** no JSON input
-**When** the command runs `-n '1 + 2'`
-**Then** the output value is `3`.
+**When** the command runs `-n 'type'`
+**Then** the output value is `"null"`.
 
 ### AC: invalid-json-fails (verifies REQ:invalid-json-error)
 

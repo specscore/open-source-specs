@@ -30,11 +30,24 @@ The command examples assume a `gojq` binary built from
 | AC | Command | Expected result |
 |---|---|---|
 | `input-and-output-modes/AC:stdin-json-field-query` | `gojq '.foo' fixtures/basic-object.json` | stdout `128` |
-| `input-and-output-modes/AC:null-input-computes-value` | `gojq -n '1 + 2'` | stdout `3` |
+| `input-and-output-modes/AC:null-input-computes-value` | `gojq -n 'type'` | stdout `"null"` |
 | `input-and-output-modes/AC:invalid-json-fails` | `gojq '.' fixtures/invalid-object.json` | non-zero exit; stderr reports invalid JSON |
 | `input-and-output-modes/AC:array-iterator-writes-multiple-values` | `gojq '.[] | .id' fixtures/array-of-ids.json` | stdout lines `1`, `2`, `3` |
 | `input-and-output-modes/AC:compact-output-removes-pretty-whitespace` | `gojq -c '.' fixtures/nested-object.json` | stdout `{"a":{"b":42}}` |
 | `input-and-output-modes/AC:raw-output-removes-string-quotes` | `gojq -r '.name' fixtures/name-object.json` | stdout `sample` |
+
+## CLI
+
+The CLI feature applies to generated implementations. The `gojq` reference
+commands above do not use this subcommand layout.
+
+CLI command wiring is specified by [`cli`](../spec/features/cli/README.md).
+Subcommand-specific acceptance checks are owned by their underlying feature
+documents:
+
+- [`cli/eval`](../spec/features/cli/eval/README.md)
+- [`cli/check`](../spec/features/cli/check/README.md)
+- [`cli/version`](../spec/features/cli/version/README.md)
 
 ## Go Library API
 
