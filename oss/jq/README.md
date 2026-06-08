@@ -4,6 +4,9 @@ Unofficial SpecScore specifications for a MiniJQ subset, based on
 [`itchyny/gojq`](https://github.com/itchyny/gojq), a pure Go implementation of
 jq.
 
+jq is a command-line JSON processor and query language used to filter,
+transform, and format JSON data.
+
 This package is a draft reference artifact. It is not an official jq or gojq
 specification, and it does not imply endorsement by jq or gojq maintainers.
 
