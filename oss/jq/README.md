@@ -287,6 +287,14 @@ field lookup, nested lookup, array iteration, array index, pipe composition,
 object construction, `length`, `keys`, `has()`, `map()`, `select()`, and `type`.
 ```
 
+Prompt index:
+
+- [Go](#go)
+- [Rust](#rust)
+- [Python](#python)
+- [TypeScript](#typescript)
+- [C#](#c)
+
 ## Scope Boundary
 
 This draft starts with behavior that is easy to inspect from `gojq` examples and
