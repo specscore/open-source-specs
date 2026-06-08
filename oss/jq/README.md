@@ -84,8 +84,9 @@ that can be backed by fixtures and checked deterministically.
 
 ## Implementation Prompts
 
-These prompts are intended for comparable MiniJQ reimplementation runs across
-languages. Each prompt asks for both an importable library/module and a CLI, with
+These prompts (Go, Rust, Python, TypeScript, C#) are intended for comparable
+MiniJQ reimplementation runs across languages. Each prompt asks for both an
+importable library/module and a CLI, with
 roughly parallel structure: lexer, parser, AST, evaluator, CLI adapter, tests,
 and fixtures. They intentionally leave implementation details open enough for
 the target language to feel natural, while keeping the project shape similar
@@ -104,9 +105,6 @@ filtered CLI validation harness, not as an implementation guide.
 
 The CLI must follow the [MiniJQ CLI feature specification](spec/features/cli/README.md)
 and its `eval`, `check`, and `version` subcommand specs.
-
-These prompts ([Go](#go), [Rust](#rust), [Python](#python), [TypeScript](#typescript),
-[C#](#c)) are intended for comparable MiniJQ reimplementation runs.
 
 ### Go
 
