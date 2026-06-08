@@ -7,6 +7,9 @@ tool builders, and agents can inspect concrete examples of SpecScore applied to
 real software. The specs are not upstream-maintainer endorsements unless a
 project explicitly says so.
 
+For readers new to jq: jq is a command-line JSON processor and query language
+used to filter, transform, and format JSON data.
+
 ## Contents
 
 | Path | Project | Status |

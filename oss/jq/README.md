@@ -87,9 +87,9 @@ roughly parallel structure: lexer, parser, AST, evaluator, CLI adapter, tests,
 and fixtures. They intentionally leave implementation details open enough for
 the target language to feel natural, while keeping the project shape similar
 enough to compare behavior, test coverage, and implementation effort. Each run
-should aim for 100% pass rate against the documented acceptance checks; this is
-a target, not a show-stopper, so partial implementations should still ship with
-the missing checks listed by AC ID.
+MUST pass 100% of the documented acceptance checks. 100% code test coverage is
+strongly desired, but it is not a show-stopper if the implementation passes all
+acceptance checks and any coverage gaps are documented.
 
 Implementation runs must be spec-only. The implementer MUST NOT inspect jq,
 gojq, jqlang documentation, jq/gojq tests, existing jq implementations, or any
@@ -110,9 +110,10 @@ Use only this SpecScore package for MiniJQ behavior. Do not inspect jq/gojq
 source, docs, tests, existing implementations, or other repositories to infer
 semantics. External references are allowed only for Go, `encoding/json`,
 `cobra`, `testing`, and other imported implementation libraries.
-Aim for 100% pass rate against the documented acceptance checks. If that is not
-feasible in the available time, still deliver the working partial implementation
-and list the missing checks by AC ID.
+Pass 100% of the documented acceptance checks; this is a hard requirement. Aim
+for 100% code test coverage as well, but treat coverage as strongly desired
+rather than a blocker if all acceptance checks pass and coverage gaps are
+documented.
 
 Suggested structure:
 - `pkg/minijq/` for lexer, parser, AST, evaluator, public API, and errors.
@@ -139,9 +140,10 @@ Use only this SpecScore package for MiniJQ behavior. Do not inspect jq/gojq
 source, docs, tests, existing implementations, or other repositories to infer
 semantics. External references are allowed only for Python, `json`, `argparse`,
 `pytest`, and other imported implementation libraries.
-Aim for 100% pass rate against the documented acceptance checks. If that is not
-feasible in the available time, still deliver the working partial implementation
-and list the missing checks by AC ID.
+Pass 100% of the documented acceptance checks; this is a hard requirement. Aim
+for 100% code test coverage as well, but treat coverage as strongly desired
+rather than a blocker if all acceptance checks pass and coverage gaps are
+documented.
 
 Suggested structure:
 - `src/minijq/` for lexer, parser, AST, evaluator, public API, and errors.
@@ -169,9 +171,10 @@ Use only this SpecScore package for MiniJQ behavior. Do not inspect jq/gojq
 source, docs, tests, existing implementations, or other repositories to infer
 semantics. External references are allowed only for Node.js, TypeScript,
 `commander`, `vitest`, and other imported implementation libraries.
-Aim for 100% pass rate against the documented acceptance checks. If that is not
-feasible in the available time, still deliver the working partial implementation
-and list the missing checks by AC ID.
+Pass 100% of the documented acceptance checks; this is a hard requirement. Aim
+for 100% code test coverage as well, but treat coverage as strongly desired
+rather than a blocker if all acceptance checks pass and coverage gaps are
+documented.
 
 Suggested structure:
 - `src/` for lexer, parser, AST, evaluator, public API, and errors.
