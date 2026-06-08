@@ -83,7 +83,10 @@ languages. Each prompt asks for both an importable library/module and a CLI, wit
 roughly parallel structure: lexer, parser, AST, evaluator, CLI adapter, tests,
 and fixtures. They intentionally leave implementation details open enough for
 the target language to feel natural, while keeping the project shape similar
-enough to compare behavior, test coverage, and implementation effort.
+enough to compare behavior, test coverage, and implementation effort. Each run
+should aim for 100% pass rate against the documented acceptance checks; this is
+a target, not a show-stopper, so partial implementations should still ship with
+the missing checks listed by AC ID.
 
 ### Go
 
@@ -93,6 +96,9 @@ Implement MiniJQ in Go from the SpecScore package in this directory.
 Build an importable library plus a CLI. Use Go 1.22+, `encoding/json` for JSON,
 `github.com/spf13/cobra` for CLI argument parsing, and the standard `testing`
 package. Do not use gojq as a dependency; it is only the behavioral reference.
+Aim for 100% pass rate against the documented acceptance checks. If that is not
+feasible in the available time, still deliver the working partial implementation
+and list the missing checks by AC ID.
 
 Suggested structure:
 - `pkg/minijq/` for lexer, parser, AST, evaluator, public API, and errors.
@@ -116,6 +122,9 @@ Implement MiniJQ in Python from the SpecScore package in this directory.
 Build an importable package plus a CLI. Use Python 3.12+, the standard `json`
 module, `argparse` for CLI argument parsing, and `pytest` for tests. Do not wrap
 or call jq/gojq; use them only as behavioral references.
+Aim for 100% pass rate against the documented acceptance checks. If that is not
+feasible in the available time, still deliver the working partial implementation
+and list the missing checks by AC ID.
 
 Suggested structure:
 - `src/minijq/` for lexer, parser, AST, evaluator, public API, and errors.
@@ -140,6 +149,9 @@ Build an importable npm package plus a CLI. Use Node.js 20+, TypeScript,
 `commander` for CLI argument parsing, Node's built-in filesystem/stdin APIs, and
 `vitest` for tests. Do not wrap or call jq/gojq; use them only as behavioral
 references.
+Aim for 100% pass rate against the documented acceptance checks. If that is not
+feasible in the available time, still deliver the working partial implementation
+and list the missing checks by AC ID.
 
 Suggested structure:
 - `src/` for lexer, parser, AST, evaluator, public API, and errors.
