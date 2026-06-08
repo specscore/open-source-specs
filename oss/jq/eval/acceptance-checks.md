@@ -3,6 +3,8 @@
 These checks map concrete examples to the draft SpecScore AC IDs under
 [`../spec/features/`](../spec/features/).
 
+The AC IDs come from [SpecScore feature specifications](https://specscore.md/feature-specification).
+
 The command examples assume a `gojq` binary built from
 [`itchyny/gojq`](https://github.com/itchyny/gojq).
 

@@ -3,6 +3,8 @@
 This rubric is for evaluating a jq-like implementation against the draft
 SpecScore package. It is not a benchmark leaderboard.
 
+Scores should be reported against [SpecScore acceptance criteria](https://specscore.md/feature-specification).
+
 ## Pass Levels
 
 | Level | Meaning |

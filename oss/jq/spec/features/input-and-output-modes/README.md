@@ -14,6 +14,8 @@ The gojq command reads JSON input, evaluates a query, and writes one output per
 emitted result. This draft covers standard JSON input, null input mode, compact
 JSON output, raw string output, and invalid JSON reporting.
 
+This document follows the [SpecScore feature specification](https://specscore.md/feature-specification).
+
 ## Problem
 
 Filter semantics are not enough to specify a jq-compatible command. Agents and

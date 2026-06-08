@@ -2,6 +2,9 @@
 
 Draft SpecScore specifications for open-source projects.
 
+Each package uses [SpecScore](https://specscore.md) to describe behavior as
+reviewable requirements and acceptance criteria.
+
 | Project | Spec package | Source project | Status |
 |---|---|---|---|
 | jq / MiniJQ | [`jq/`](jq/README.md) | [`itchyny/gojq`](https://github.com/itchyny/gojq), a pure Go implementation of jq, the command-line JSON processor/query language | Draft |

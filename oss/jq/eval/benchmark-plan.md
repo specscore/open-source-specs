@@ -3,6 +3,9 @@
 This draft benchmark uses a MiniJQ subset as a small but non-trivial target for
 SpecScore-based specification and implementation.
 
+The benchmark input is a [SpecScore](https://specscore.md) specification tree
+with acceptance checks.
+
 ## Decision
 
 Use MiniJQ, not full jq, as the benchmark target.

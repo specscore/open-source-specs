@@ -3,6 +3,8 @@ format: https://specscore.md/features-index-specification
 ---
 # MiniJQ Features
 
+This index follows the [SpecScore features index specification](https://specscore.md/features-index-specification).
+
 | Feature | Description |
 |---|---|
 | [`basic-filter-evaluation`](basic-filter-evaluation/README.md) | Core MiniJQ filter evaluation behavior. |

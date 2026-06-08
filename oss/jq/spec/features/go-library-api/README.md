@@ -14,6 +14,8 @@ gojq can be embedded as a Go library. This draft specifies the small public API
 surface needed to parse a query, compile it, run it against decoded JSON-shaped
 Go values, and consume emitted results or errors.
 
+This document follows the [SpecScore feature specification](https://specscore.md/feature-specification).
+
 ## Problem
 
 The reference package should reflect that `gojq` is not only a command. A Go

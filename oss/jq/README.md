@@ -10,6 +10,9 @@ transform, and format JSON data.
 This package is a draft reference artifact. It is not an official jq or gojq
 specification, and it does not imply endorsement by jq or gojq maintainers.
 
+The behavior docs use [SpecScore feature specifications](https://specscore.md/feature-specification)
+to keep requirements and acceptance checks traceable.
+
 ## Decision Direction
 
 The target is a deliberately small jq subset, not the full jq language.

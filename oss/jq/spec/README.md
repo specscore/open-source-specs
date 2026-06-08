@@ -6,6 +6,8 @@ status: Draft
 
 SpecScore feature tree for the MiniJQ draft package.
 
+This tree follows the [SpecScore specification format](https://specscore.md/specification).
+
 | Feature | Description |
 |---|---|
 | [`basic-filter-evaluation`](features/basic-filter-evaluation/README.md) | Core MiniJQ filter evaluation behavior. |

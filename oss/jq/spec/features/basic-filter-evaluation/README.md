@@ -15,6 +15,8 @@ deterministic JSON values. This draft covers identity, object field lookup,
 array indexing and iteration, pipe composition, object construction, and a small
 set of builtins useful for a reimplementation benchmark.
 
+This document follows the [SpecScore feature specification](https://specscore.md/feature-specification).
+
 ## Problem
 
 Without a small executable behavior slice, a reference jq specification either
