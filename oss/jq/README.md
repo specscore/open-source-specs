@@ -76,6 +76,85 @@ that can be backed by fixtures and checked deterministically.
   jq-like implementation against this package.
 - [`eval/fixtures/`](eval/fixtures/) contains JSON inputs and expected outputs.
 
+## Implementation Prompts
+
+These prompts are intended for comparable MiniJQ reimplementation runs across
+languages. Each prompt asks for both an importable library/module and a CLI, with
+roughly parallel structure: lexer, parser, AST, evaluator, CLI adapter, tests,
+and fixtures. They intentionally leave implementation details open enough for
+the target language to feel natural, while keeping the project shape similar
+enough to compare behavior, test coverage, and implementation effort.
+
+### Go
+
+```text
+Implement MiniJQ in Go from the SpecScore package in this directory.
+
+Build an importable library plus a CLI. Use Go 1.22+, `encoding/json` for JSON,
+`github.com/spf13/cobra` for CLI argument parsing, and the standard `testing`
+package. Do not use gojq as a dependency; it is only the behavioral reference.
+
+Suggested structure:
+- `pkg/minijq/` for lexer, parser, AST, evaluator, public API, and errors.
+- `cmd/minijq/` for the CLI.
+- `testdata/` or `tests/fixtures/` for JSON fixtures and expected outputs.
+
+The library should expose a small API such as `Parse(query string)` and
+`Evaluate(query, input)` or equivalent. The CLI should read JSON from stdin or
+files, accept a query argument, support the documented MiniJQ output modes, and
+return useful errors for invalid JSON or invalid queries. Cover the documented
+MiniJQ subset only: field lookup, nested lookup, array iteration, array index,
+pipe composition, object construction, `length`, `keys`, `has()`, `map()`,
+`select()`, and `type`.
+```
+
+### Python
+
+```text
+Implement MiniJQ in Python from the SpecScore package in this directory.
+
+Build an importable package plus a CLI. Use Python 3.12+, the standard `json`
+module, `argparse` for CLI argument parsing, and `pytest` for tests. Do not wrap
+or call jq/gojq; use them only as behavioral references.
+
+Suggested structure:
+- `src/minijq/` for lexer, parser, AST, evaluator, public API, and errors.
+- `src/minijq/cli.py` for the CLI entry point.
+- `tests/` and `tests/fixtures/` for acceptance tests and JSON fixtures.
+
+The package should expose a small API such as `parse(query)` and
+`evaluate(query, value)` or equivalent. The CLI should read JSON from stdin or
+files, accept a query argument, support the documented MiniJQ output modes, and
+return useful errors for invalid JSON or invalid queries. Cover the documented
+MiniJQ subset only: field lookup, nested lookup, array iteration, array index,
+pipe composition, object construction, `length`, `keys`, `has()`, `map()`,
+`select()`, and `type`.
+```
+
+### TypeScript
+
+```text
+Implement MiniJQ in TypeScript from the SpecScore package in this directory.
+
+Build an importable npm package plus a CLI. Use Node.js 20+, TypeScript,
+`commander` for CLI argument parsing, Node's built-in filesystem/stdin APIs, and
+`vitest` for tests. Do not wrap or call jq/gojq; use them only as behavioral
+references.
+
+Suggested structure:
+- `src/` for lexer, parser, AST, evaluator, public API, and errors.
+- `src/cli.ts` for the CLI entry point.
+- `tests/` and `tests/fixtures/` for acceptance tests and JSON fixtures.
+
+The package should export a small API such as `parse(query)` and
+`evaluate(query, value)` or equivalent. The CLI should read JSON from stdin or
+files, accept a query argument, support the documented MiniJQ output modes, and
+return useful errors for invalid JSON or invalid queries. Cover the documented
+MiniJQ subset only: field lookup, nested lookup, array iteration, array index,
+pipe composition, object construction, `length`, `keys`, `has()`, `map()`,
+`select()`, and `type`.
+```
+
 ## Scope Boundary
 
 This draft starts with behavior that is easy to inspect from `gojq` examples and
