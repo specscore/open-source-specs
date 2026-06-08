@@ -11,7 +11,7 @@ project explicitly says so.
 
 | Path | Project | Status |
 |---|---|---|
-| [`oss/jq/`](oss/jq/README.md) | jq behavior, based on the Go implementation [`itchyny/gojq`](https://github.com/itchyny/gojq) | Draft |
+| [`oss/jq/`](oss/jq/README.md) | MiniJQ subset behavior, based on the Go implementation [`itchyny/gojq`](https://github.com/itchyny/gojq) | Draft |
 
 ## Rules
 

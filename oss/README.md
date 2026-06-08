@@ -4,7 +4,7 @@ Draft SpecScore specifications for open-source projects.
 
 | Project | Spec package | Source project | Status |
 |---|---|---|---|
-| jq | [`jq/`](jq/README.md) | [`itchyny/gojq`](https://github.com/itchyny/gojq), a pure Go implementation of jq | Draft |
+| jq / MiniJQ | [`jq/`](jq/README.md) | [`itchyny/gojq`](https://github.com/itchyny/gojq), a pure Go implementation of jq | Draft |
 
 ## Inclusion Criteria
 

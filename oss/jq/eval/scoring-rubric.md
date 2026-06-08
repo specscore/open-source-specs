@@ -19,3 +19,6 @@ SpecScore package. It is not a benchmark leaderboard.
 - For invalid JSON, do not require exact diagnostic wording in this draft; require failure and an invalid-JSON classification.
 - For library checks, record the Go version and `gojq` commit if executable tests are added.
 - Do not report aggregate scores until the command and expected output for every AC are reproducible.
+- Keep public and hidden checks separate when using this package for a benchmark.
+  Hidden tests should exercise the same specified behavior, not unstated jq
+  features.

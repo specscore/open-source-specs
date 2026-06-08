@@ -14,7 +14,14 @@ The command examples assume a `gojq` binary built from
 | `basic-filter-evaluation/AC:dot-field-returns-value` | `gojq '.foo' fixtures/basic-object.json` | `128` |
 | `basic-filter-evaluation/AC:nested-dot-field-returns-value` | `gojq '.a.b' fixtures/nested-object.json` | `42` |
 | `basic-filter-evaluation/AC:array-pipe-emits-each-id` | `gojq '.[] | .id' fixtures/array-of-ids.json` | `1`, `2`, `3` on separate output lines |
+| `basic-filter-evaluation/AC:array-index-returns-first-element` | `gojq '.[0]' fixtures/array-values.json` | `10` |
 | `basic-filter-evaluation/AC:computed-object-key-builds-object` | `gojq -c '{(.id): .["10"].b}' fixtures/computed-key.json` | `{"sample":42}` |
+| `basic-filter-evaluation/AC:length-counts-array-elements` | `gojq 'length' fixtures/array-of-ids.json` | `3` |
+| `basic-filter-evaluation/AC:keys-lists-object-keys` | `gojq -c 'keys' fixtures/basic-object.json` | `["foo"]` |
+| `basic-filter-evaluation/AC:has-reports-object-key-presence` | `gojq 'has("foo")' fixtures/basic-object.json` | `true` |
+| `basic-filter-evaluation/AC:map-applies-filter-to-array` | `gojq -c 'map(.id)' fixtures/array-of-ids.json` | `[1,2,3]` |
+| `basic-filter-evaluation/AC:select-emits-matching-value` | `gojq '.[] | select(.id == 2) | .id' fixtures/array-of-ids.json` | `2` |
+| `basic-filter-evaluation/AC:type-reports-object` | `gojq -r 'type' fixtures/basic-object.json` | `object` |
 
 ## Input and Output Modes
 
