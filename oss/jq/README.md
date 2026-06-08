@@ -99,7 +99,8 @@ other repository to infer behavior. The only behavioral sources are the
 specifications in `spec/` and the acceptance checks in `eval/`. External
 references are allowed only for the implementation language, runtime, JSON
 parser, CLI parser, test framework, and other imported libraries needed to build
-the solution.
+the solution. The jq test suite may be used only after implementation as a
+filtered CLI validation harness, not as an implementation guide.
 
 The CLI must follow the [MiniJQ CLI feature specification](spec/features/cli/README.md)
 and its `eval`, `check`, and `version` subcommand specs.
@@ -123,6 +124,9 @@ Requirements:
 - Pass 100% of the documented acceptance checks; this is a hard requirement.
 - Aim for 100% code test coverage as well; this is strongly desired, but not a
   blocker if all acceptance checks pass and coverage gaps are documented.
+- After implementation, test the CLI against the existing jq test suite,
+  filtered to MiniJQ-specified behavior; skip and document out-of-scope jq
+  tests.
 - Implement the `minijq eval`, `minijq check`, and `minijq version` subcommands
   specified in `spec/features/cli/`.
 
@@ -157,6 +161,9 @@ Requirements:
 - Pass 100% of the documented acceptance checks; this is a hard requirement.
 - Aim for 100% code test coverage as well; this is strongly desired, but not a
   blocker if all acceptance checks pass and coverage gaps are documented.
+- After implementation, test the CLI against the existing jq test suite,
+  filtered to MiniJQ-specified behavior; skip and document out-of-scope jq
+  tests.
 - Implement the `minijq eval`, `minijq check`, and `minijq version` subcommands
   specified in `spec/features/cli/`.
 
@@ -191,6 +198,9 @@ Requirements:
 - Pass 100% of the documented acceptance checks; this is a hard requirement.
 - Aim for 100% code test coverage as well; this is strongly desired, but not a
   blocker if all acceptance checks pass and coverage gaps are documented.
+- After implementation, test the CLI against the existing jq test suite,
+  filtered to MiniJQ-specified behavior; skip and document out-of-scope jq
+  tests.
 - Implement the `minijq eval`, `minijq check`, and `minijq version` subcommands
   specified in `spec/features/cli/`.
 
@@ -224,6 +234,9 @@ Requirements:
 - Pass 100% of the documented acceptance checks; this is a hard requirement.
 - Aim for 100% code test coverage as well; this is strongly desired, but not a
   blocker if all acceptance checks pass and coverage gaps are documented.
+- After implementation, test the CLI against the existing jq test suite,
+  filtered to MiniJQ-specified behavior; skip and document out-of-scope jq
+  tests.
 - Implement the `minijq eval`, `minijq check`, and `minijq version` subcommands
   specified in `spec/features/cli/`.
 
@@ -257,6 +270,9 @@ Requirements:
 - Pass 100% of the documented acceptance checks; this is a hard requirement.
 - Aim for 100% code test coverage as well; this is strongly desired, but not a
   blocker if all acceptance checks pass and coverage gaps are documented.
+- After implementation, test the CLI against the existing jq test suite,
+  filtered to MiniJQ-specified behavior; skip and document out-of-scope jq
+  tests.
 - Implement the `minijq eval`, `minijq check`, and `minijq version` subcommands
   specified in `spec/features/cli/`.
 

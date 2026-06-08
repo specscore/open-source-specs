@@ -61,6 +61,24 @@ Track:
 - number and type of clarifying questions;
 - manual repair cycles before passing tests.
 
+## Testing Strategy
+
+The first correctness gate is this repository's documented acceptance checks.
+Every implementation run must pass those checks before it is considered
+complete.
+
+After the acceptance checks pass, each generated CLI should also be tested
+against the existing jq test suite as a compatibility signal. The harness should
+run only tests whose filters, inputs, and expected outputs are covered by the
+MiniJQ specifications in this package. Tests for full jq behavior that is not in
+scope must be skipped with a documented reason rather than treated as new
+requirements.
+
+The jq test suite is validation material, not a behavioral source for
+implementation. Implementers should not inspect jq tests to infer semantics
+before or during implementation; use the suite after implementation to identify
+compatibility gaps and to inform future spec work.
+
 ## Open Questions
 
 - Is the current MiniJQ feature list final?
