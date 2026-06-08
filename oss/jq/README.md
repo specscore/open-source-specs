@@ -88,6 +88,13 @@ should aim for 100% pass rate against the documented acceptance checks; this is
 a target, not a show-stopper, so partial implementations should still ship with
 the missing checks listed by AC ID.
 
+Implementation runs must be spec-only. The implementer MUST NOT inspect jq,
+gojq, jqlang documentation, jq/gojq tests, existing jq implementations, or any
+other repository to infer behavior. The only behavioral source is this SpecScore
+package. External references are allowed only for the implementation language,
+runtime, JSON parser, CLI parser, test framework, and other imported libraries
+needed to build the solution.
+
 ### Go
 
 ```text
@@ -95,7 +102,11 @@ Implement MiniJQ in Go from the SpecScore package in this directory.
 
 Build an importable library plus a CLI. Use Go 1.22+, `encoding/json` for JSON,
 `github.com/spf13/cobra` for CLI argument parsing, and the standard `testing`
-package. Do not use gojq as a dependency; it is only the behavioral reference.
+package.
+Use only this SpecScore package for MiniJQ behavior. Do not inspect jq/gojq
+source, docs, tests, existing implementations, or other repositories to infer
+semantics. External references are allowed only for Go, `encoding/json`,
+`cobra`, `testing`, and other imported implementation libraries.
 Aim for 100% pass rate against the documented acceptance checks. If that is not
 feasible in the available time, still deliver the working partial implementation
 and list the missing checks by AC ID.
@@ -120,8 +131,11 @@ pipe composition, object construction, `length`, `keys`, `has()`, `map()`,
 Implement MiniJQ in Python from the SpecScore package in this directory.
 
 Build an importable package plus a CLI. Use Python 3.12+, the standard `json`
-module, `argparse` for CLI argument parsing, and `pytest` for tests. Do not wrap
-or call jq/gojq; use them only as behavioral references.
+module, `argparse` for CLI argument parsing, and `pytest` for tests.
+Use only this SpecScore package for MiniJQ behavior. Do not inspect jq/gojq
+source, docs, tests, existing implementations, or other repositories to infer
+semantics. External references are allowed only for Python, `json`, `argparse`,
+`pytest`, and other imported implementation libraries.
 Aim for 100% pass rate against the documented acceptance checks. If that is not
 feasible in the available time, still deliver the working partial implementation
 and list the missing checks by AC ID.
@@ -147,8 +161,11 @@ Implement MiniJQ in TypeScript from the SpecScore package in this directory.
 
 Build an importable npm package plus a CLI. Use Node.js 20+, TypeScript,
 `commander` for CLI argument parsing, Node's built-in filesystem/stdin APIs, and
-`vitest` for tests. Do not wrap or call jq/gojq; use them only as behavioral
-references.
+`vitest` for tests.
+Use only this SpecScore package for MiniJQ behavior. Do not inspect jq/gojq
+source, docs, tests, existing implementations, or other repositories to infer
+semantics. External references are allowed only for Node.js, TypeScript,
+`commander`, `vitest`, and other imported implementation libraries.
 Aim for 100% pass rate against the documented acceptance checks. If that is not
 feasible in the available time, still deliver the working partial implementation
 and list the missing checks by AC ID.
